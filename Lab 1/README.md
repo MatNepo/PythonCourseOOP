@@ -1,4 +1,3 @@
-<<<<<<< Lab1
 # Лабораторная работа 1
 ## Задание:
 1) Нужно было написать 3 абстрактных класса, описывающих любой объект
@@ -66,4 +65,4 @@ doctest.testmod()
 The conditions for laboratory work and assignments are taken from this [page](https://github.com/hse-labs/DD-PY2-labs).
 
 Theory to complete labs was taken [here](https://colab.research.google.com/drive/1eQ-8lG0b-eunGyUmM_XLKYsRA9_V0CO3?usp=sharing)
->>>>>>> Labs
+
