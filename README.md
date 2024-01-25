@@ -1,7 +1,49 @@
-## Object Oriented Programming in Python
+# Система Управления Смартфоном
 
-### Labs from OOP course on Python
+Этот Python-скрипт представляет собой простую систему управления смартфоном, организованную с использованием классов для работы с контактами, электронными устройствами и, конечно же, с самим смартфоном. Сценарий предоставляет функционал для совершения звонков, отправки сообщений, управления контактами и подключения к Wi-Fi.
 
-The conditions for laboratory work and assignments are taken from this [page](https://github.com/hse-labs/DD-PY2-labs).
+## Классы
 
-Theory to complete labs was taken [here](https://colab.research.google.com/drive/1eQ-8lG0b-eunGyUmM_XLKYsRA9_V0CO3?usp=sharing)
+### 1. **Contact**
+   - Представляет контакт с именем и номером телефона.
+   - Предоставляет строковое представление для удобного отображения.
+
+### 2. **ElectronicDevice**
+   - Базовый класс для электронных устройств.
+   - Управляет подключением к Wi-Fi, генерацией случайных паролей и основной информацией об устройстве.
+
+### 3. **SmartPhone** (наследует от **ElectronicDevice**)
+   - Расширяет базовый класс для представления смартфона.
+   - Включает функции включения/выключения телефона, совершения звонков, отправки сообщений, управления контактами и обновления информации о контактах.
+
+## Пример Использования
+
+```python
+from smartphone_management import SmartPhone
+
+# Создание экземпляра смартфона
+phone = SmartPhone(brand="Samsung", model="Galaxy S21", power_consumption=5.0, apps=["Messaging", "Camera"])
+
+# Включение телефона
+phone.turn_on()
+
+# Совершение звонка
+phone.make_call("84(3678)712-00-97")
+
+# Отправка сообщения
+phone.send_message("76(62)353-86-52", "Привет! Как у тебя дела?")
+
+# Подключение к Wi-Fi
+phone.connect_to_wifi("MyHomeWiFi")
+
+# Выключение телефона
+phone.turn_off()
+
+# Управление контактами
+phone.add_contact(name="Guido van Rossum", phone_number="650-595-XXXX")
+phone.add_contact(name="Alice Smith", phone_number="0(594)070-76-85")
+
+# Вывод телефонной книги
+print("Телефонная книга:")
+for contact in phone.contacts.values():
+    print(contact)
