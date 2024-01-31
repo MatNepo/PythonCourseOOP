@@ -1,30 +1,22 @@
 class Book:
     """ Базовый класс книги. """
     def __init__(self, name: str, author: str):
-        self.name = name
-        self.author = author
+        self._name = name
+        self._author = author
 
     @property
     def name(self):
-        return self.name
+        return self._name
 
     @property
     def author(self):
-        return self.author
+        return self._author
 
     def __str__(self):
         return f"Книга {self.name}. Автор {self.author}"
 
     def __repr__(self):
-        return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
-
-    @name.setter
-    def name(self, value):
-        self._name = value
-
-    @author.setter
-    def author(self, value):
-        self._author = value
+        return f"{self.__class__.__name__}(name={repr(self.name)}, author={repr(self.author)})"
 
 
 class PaperBook(Book):
@@ -42,8 +34,8 @@ class PaperBook(Book):
             raise ValueError("Количество страниц должно быть положительным целым числом.")
         self._pages = value
 
-    def __str__(self):
-        return f"{super().__str__()}. Количество страниц: {self.pages}"
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name={repr(self.name)}, author={repr(self.author)}, pages={self.pages})"
 
 
 class AudioBook(Book):
@@ -61,5 +53,5 @@ class AudioBook(Book):
             raise ValueError("Продолжительность должна быть положительным числом.")
         self._duration = value
 
-    def __str__(self):
-        return f"{super().__str__()}. Продолжительность: {self.duration} часов"
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name={repr(self.name)}, author={repr(self.author)}, duration={self.duration})"
