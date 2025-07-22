@@ -24,15 +24,15 @@ with patch('main.datetime') as mock_datetime:
 
 - Таким образом, при запуске теста происходит считывание временной метки и будет выводиться информация о том, что сообщение было получено 2023-12-03 00:40:58 и тест проходит успешно:
 
-![Test show_info(1)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%201.png)
-![Test show_info(2)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%202.png)
+![Test show_info_1](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%201.png)
+![Test show_info_2](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%202.png)
 
 ### Запуск тестов
 
 Чтобы запустить все тесты, необходимо:
 - нажать и запустить ```Run 'Doctest in main'``` в правом верхнем углу экрана:
 
-![Test show_info(3)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%203.png)
+![Test show_info_3(https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%203.png)
 
 - нажать ПКМ в любой части кода после:
 ```python
@@ -40,15 +40,15 @@ doctest.testmod()
 ```
 на ```581``` и запустить ```Run 'Doctest in main'```:
 
-![Test show_info(4)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%204.png)
+![Test show_info_4](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%204.png)
 
 В этом случае тесты пройдкт успешно!
 
 Однако, если запустить ```Run 'main'``` (нажать ```Run``` около блока ```if __name__ == "__main__":```), то не сработает один тест, описанный в методе ```show_info()```, т.к. он выведет текущее время:
 
-![Test show_info(5)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%205.png)
+![Test show_info_5](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%205.png)
 
-![Test show_info(6)](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%206.png)
+![Test show_info_6](https://github.com/MatNepo/PythonCourseOOP/blob/Lab1/Screenshot%206.png)
 
 
 **Именно эту проблему не получилось решить**
